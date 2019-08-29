@@ -1,8 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux'
 import './index.css';
 import itemsReducer from './reducers/itemsReducer';
-
 import { configureStore } from 'redux-starter-kit';
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
@@ -11,9 +11,10 @@ const store = configureStore({
   reducer: itemsReducer
 })
 
-
 ReactDOM.render(
-	<App />, 
+	<Provider store={store}>
+		<App/>
+	</Provider>, 
 	document.getElementById('root')
 );
 
