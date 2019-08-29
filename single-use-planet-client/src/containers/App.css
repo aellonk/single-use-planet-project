@@ -31,3 +31,14 @@
     transform: rotate(360deg);
   }
 }
+
+.ItemCardTitle {
+  text-align: center;
+}
+
+.ItemCardImg {
+  height: auto;
+  width: 50%;
+  margin: 0 auto;
+  display: block;
+}
