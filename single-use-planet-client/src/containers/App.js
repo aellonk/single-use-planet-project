@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Items from './Items';
 import './App.css';
 
+const API_URL = process.env.REACT_APP_API_URL;
+
 class App extends Component {
 
 	constructor(props) {
@@ -13,7 +15,7 @@ class App extends Component {
 	}
 
 	componentDidMount() {
-		fetch('http://localhost:3001/api/items')
+		fetch(`${API_URL}`)
 		.then(response => response.json())
 		.then(items => this.setState({ items}))
 	}
