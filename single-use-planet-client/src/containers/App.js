@@ -7,14 +7,6 @@ const API_URL = process.env.REACT_APP_API_URL;
 
 class App extends Component {
 
-	constructor(props) {
-		super(props)
-
-		this.state = {
-			items: []
-		}
-	}
-
 	componentDidMount() {
 		fetch(`${API_URL}`)
 		.then(response => response.json())
@@ -25,7 +17,7 @@ class App extends Component {
 		return (
 			<div> 
 				App Container
-				<Items items={this.state.items} />
+				<Items />
 				<FeedbackForm />
 			</div>
 		)
