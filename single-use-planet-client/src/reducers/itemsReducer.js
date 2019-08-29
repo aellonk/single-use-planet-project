@@ -1,4 +1,3 @@
-
 const itemsReducer = (state = [], action) => {
 	switch(action.type) {
 		case 'GET_ITEMS_SUCCESS':
@@ -10,3 +9,4 @@ const itemsReducer = (state = [], action) => {
 }
 
 
+export default itemsReducer;
