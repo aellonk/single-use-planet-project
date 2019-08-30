@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import ItemCard from '../components/ItemCard'
+import ItemCard from '../components/ItemCard';
+import { getItems } from '../actions/items';
+
 
 class Items extends Component {
 
-		componentDidMount() {
-		this.props.dispatch({
-			type: 'GET_ITEMS_SUCCESS',
-			items: [ {name: "test", img_url:"test", alternative: "use less", material: "paper", instructions: "test"}]
-		})
+	componentDidMount() {
+		this.props.getItems()
 	}
 	
 	render() {
@@ -31,4 +30,4 @@ const mapStateToProps = (state) => {
 }
 
 
-export default connect(mapStateToProps)(Items);
+export default connect(mapStateToProps, { getItems })(Items);
