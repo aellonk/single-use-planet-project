@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Items from './Items';
-import FeedbackForm from './FeedbackForm';
+import SearchInput from '../components/SearchInput';
 import './App.css';
 
 
@@ -11,8 +11,8 @@ class App extends Component {
 		return (
 			<div> 
 				App Container
+				<SearchInput />
 				<Items />
-				<FeedbackForm />
 			</div>
 		)
 	}

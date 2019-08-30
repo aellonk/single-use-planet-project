@@ -1,28 +1,26 @@
 import React, { Component } from 'react'
+import { getItems } from '../actions/items';
 
 class SearchInput extends Component {
 
 	state = {
-		name: ''
+		input: ''
 	}
 
 	handleOnChange = event => {
+		let inputValue = event.target.value;
 		this.setState({
-			name: event.target.value
+			input: inputValue
 		});
 	}
 
-	handleOnSubmit = event => {
-		event.preventDefault();
-
-	}
+	
 
 	render() {
 		return(
 			<div>
-				<form onSubmit={this.handleOnSubmit}>
-					<input type="text" value={this.state.name} onChange={this.handleOnChange} />
-					<input type="submit" />
+				<form>
+					<input type="text" value={this.state.input} placeholder={"Search for an Item"}onChange={this.handleOnChange} />
 				</form>
 			</div>
 		)
