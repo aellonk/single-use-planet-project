@@ -32,8 +32,8 @@
   }
 }
 
-.ItemCardTitle {
-  text-align: center;
+.ItemName {
+  text-align: left;
 }
 
 .ItemCardImg {
