@@ -12,6 +12,11 @@ class Items extends Component {
 	componentDidMount() {
 		this.props.getItems()
 	}
+
+	handleOnClick = event => {
+		event.preventDefault();
+		return <ItemCard key={item.id} item={item} />
+	}
 	
 	render() {
 		
@@ -21,7 +26,7 @@ class Items extends Component {
 			<h1>{this.props.items.filter(item => item.name.includes(SearchInput.input))}</h1>
 			<h3>What To Do With:</h3>
 
-			{this.props.items.map(item =><ItemName key={item.id} item={item} />)}
+			{this.props.items.map(item => (<Link to={`/items/${item.id}`} onClick={return (<ItemCard key={item.id} item={item} />)} ><ItemName key={item.id} item={item} /></Link>) )}
 		</div>
 		);
 	}
