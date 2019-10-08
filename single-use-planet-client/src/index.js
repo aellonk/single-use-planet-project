@@ -8,7 +8,6 @@ import './index.css';
 import itemsReducer from './reducers/itemsReducer';
 // import { configureStore } from 'redux-starter-kit';
 import App from './containers/App';
-import NavBar from './components/NavBar'
 import Items from './containers/Items';
 import * as serviceWorker from './serviceWorker';
 
@@ -19,7 +18,6 @@ const store = createStore(itemsReducer, composeEnhancers(applyMiddleware(thunk))
 ReactDOM.render(
 	<Router>
 		<Provider store={store}>	
-			<NavBar/>
 			<App/>
 		</Provider>
 	</Router>, 
