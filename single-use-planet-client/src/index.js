@@ -1,18 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
+import { createStore, applyMiddleware, compose } from 'redux';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
+import thunk from 'redux-thunk';
 import './index.css';
 import itemsReducer from './reducers/itemsReducer';
-import { configureStore } from 'redux-starter-kit';
+// import { configureStore } from 'redux-starter-kit';
 import App from './containers/App';
 import NavBar from './components/NavBar'
 import Items from './containers/Items';
 import * as serviceWorker from './serviceWorker';
 
-const store = configureStore({
-  reducer: itemsReducer
-})
+const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const store = createStore(itemsReducer, composeEnhancers(applyMiddleware(thunk)))
 
 ReactDOM.render(
 	<Router>
@@ -30,4 +32,4 @@ ReactDOM.render(
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
 
-export default store
+// export default store

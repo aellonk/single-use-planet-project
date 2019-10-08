@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import { getItems } from '../actions/items';
 
 class SearchInput extends Component {
 
@@ -12,7 +11,10 @@ class SearchInput extends Component {
 		this.setState({
 			input: inputValue
 		});
+
 	}
+
+
 
 	
 
@@ -20,7 +22,7 @@ class SearchInput extends Component {
 		return(
 			<div>
 				<form>
-					<input type="text" value={this.state.input} placeholder={"Search for an Item"}onChange={this.handleOnChange} />
+					<input type="text" value={this.state.input} placeholder={"Search for an Item"} onChange={this.handleOnChange} />
 				</form>
 			</div>
 		)
