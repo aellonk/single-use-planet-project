@@ -1,7 +1,10 @@
 import React, { Component } from 'react';
 import Items from './Items';
 import './App.css';
+import About from '../components/About'
+import ItemCard from '../components/ItemCard'
 import NavBar from '../components/NavBar'
+import { Route, withRouter, Switch} from 'react-router-dom'
 
 
 
@@ -13,7 +16,12 @@ class App extends Component {
 			<div> 
 				App Container
 				<NavBar/>
-				<Items />
+				<Switch>
+	              <Route exact path= '/items' component={ Items }/>
+	              <Route exact path= '/about' component={ About }/>
+	              <Route exact path= '/items/:id'/>
+	              <ItemCard/>
+	            </Switch>
 			</div>
 		)
 	}
