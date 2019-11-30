@@ -12,7 +12,8 @@ class Items extends Component {
 	constructor(props) {
 	    super(props);
 	    this.state = {
-	      clicked: false
+	      clicked: false,
+	      item: ''
 	    };
   	}
 
@@ -22,7 +23,7 @@ class Items extends Component {
 	
 	handleClick = (e, item) => {
 		e.preventDefault();
-		this.setState({clicked: true})
+		this.setState({clicked: true, item: item})
 	}
 
 
@@ -34,11 +35,11 @@ class Items extends Component {
 			{this.props.items.map(item => (<div><Link to={`/items/${item.id}`} key={item.id} onClick={(e) => this.handleClick(e, item) }>
 					<ItemName key={item.id} item={item} />
 				</Link> 
-				{this.state.clicked ? <ItemCard item={item}/> : null}
 				</div>
 				)
 			)
 			}
+			{this.state.clicked ? <ItemCard item={this.state.item}/> : null}
 			</ul>
 		</div>
 		);
