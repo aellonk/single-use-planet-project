@@ -8,7 +8,6 @@ import './index.css';
 import itemsReducer from './reducers/itemsReducer';
 // import { configureStore } from 'redux-starter-kit';
 import App from './containers/App';
-import Items from './containers/Items';
 import * as serviceWorker from './serviceWorker';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

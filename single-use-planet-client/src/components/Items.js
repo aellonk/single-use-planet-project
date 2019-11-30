@@ -1,32 +1,45 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom'
+import { Route, Link } from 'react-router-dom'
 import ItemName from '../components/ItemName';
 import ItemCard from '../components/ItemCard';
 import { getItems } from '../actions/items';
-import SearchInput from '../components/SearchInput';
+
 
 
 class Items extends Component {
 
+	constructor(props) {
+	    super(props);
+	    this.state = {
+	      clicked: false
+	    };
+  	}
+
 	componentDidMount() {
 		this.props.getItems()
 	}
-
-	handleOnClick = event => {
-		event.preventDefault();
-		// return <ItemCard key={item.id} item={item} />
-	}
 	
+	handleClick = (e, item) => {
+		e.preventDefault();
+		this.setState({clicked: true})
+	}
+
+
 	render() {
-		
 		return (
 		<div>
-			<SearchInput/>
-			<h1>{this.props.items.filter(item => item.name.includes(SearchInput.input))}</h1>
 			<h3>What To Do With:</h3>
-
-			{this.props.items.map(item => (<Link to={`/items/${item.id}`} onClick={this.handleOnClick.bind(this)} ><ItemName key={item.id} item={item} /></Link>) )}
+			<ul>
+			{this.props.items.map(item => (<div><Link to={`/items/${item.id}`} key={item.id} onClick={(e) => this.handleClick(e, item) }>
+					<ItemName key={item.id} item={item} />
+				</Link> 
+				{this.state.clicked ? <ItemCard item={item}/> : null}
+				</div>
+				)
+			)
+			}
+			</ul>
 		</div>
 		);
 	}

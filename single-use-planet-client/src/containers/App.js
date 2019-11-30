@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import Items from './Items';
+import ItemsContainer from './ItemsContainer';
 import './App.css';
 import About from '../components/About'
 import ItemCard from '../components/ItemCard'
 import NavBar from '../components/NavBar'
-import { Route, withRouter, Switch} from 'react-router-dom'
-
-
+import { Route, withRouter, Switch, Link} from 'react-router-dom'
 
 
 class App extends Component {
@@ -17,10 +15,8 @@ class App extends Component {
 				App Container
 				<NavBar/>
 				<Switch>
-	              <Route exact path= '/items' component={ Items }/>
+	              <Route exact path= '/items' component={ ItemsContainer }/>
 	              <Route exact path= '/about' component={ About }/>
-	              <Route exact path= '/items/:id'/>
-	              <ItemCard/>
 	            </Switch>
 			</div>
 		)

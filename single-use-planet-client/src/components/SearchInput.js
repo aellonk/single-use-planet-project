@@ -10,12 +10,8 @@ class SearchInput extends Component {
 		let inputValue = event.target.value;
 		this.setState({
 			input: inputValue
-		});
-
+	});
 	}
-
-
-
 	
 
 	render() {
@@ -24,6 +20,7 @@ class SearchInput extends Component {
 				<form>
 					<input type="text" value={this.state.input} placeholder={"Search for an Item"} onChange={this.handleOnChange} />
 				</form>
+				
 			</div>
 		)
 	}
