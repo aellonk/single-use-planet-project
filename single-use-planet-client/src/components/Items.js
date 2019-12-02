@@ -32,7 +32,6 @@ class Items extends Component {
 	      item: e.target.value,
 	      searched: true
 	    });
-	    console.log(this.state.item);
   	}
   
   	renderAll() {

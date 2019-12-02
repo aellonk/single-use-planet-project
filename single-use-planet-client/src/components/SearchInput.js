@@ -1,29 +1,13 @@
-import React, { Component } from 'react'
+import React from 'react'
 
-class SearchInput extends Component {
+const SearchInput = () => {
 
-	state = {
-		input: ''
-	}
-
-	handleOnChange = event => {
-		let inputValue = event.target.value;
-		this.setState({
-			input: inputValue
-	});
-	}
-	
-
-	render() {
-		return(
-			<div>
-				<form>
-					<input type="text" value={this.state.input} placeholder={"Search for an Item"} onChange={this.handleOnChange} />
-				</form>
-				
-			</div>
+	return (
+		<div>
+			<input type="text" value={this.state.input} placeholder={"Search for an Item"} onChange={this.handleOnChange.bind(this)} />
+		</div>
 		)
-	}
 }
+
 
 export default SearchInput;
