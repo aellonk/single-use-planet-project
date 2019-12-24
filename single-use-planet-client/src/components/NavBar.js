@@ -9,6 +9,9 @@ const NavBar = () => {
             <NavLink exact to="/items">Browse Items</NavLink>
           </li>
           <li>
+             <NavLink exact to="/helpers">Zero Waste Helpers</NavLink>
+          </li>
+          <li>
             <NavLink exact to="/about">About</NavLink>
           </li>
           <li>

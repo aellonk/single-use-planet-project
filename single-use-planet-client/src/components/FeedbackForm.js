@@ -7,6 +7,7 @@ const FeedbackForm = () => {
 		e.preventDefault();
 			alert("Thank you for submitting your feedback.");
 			setCount(count + 1);
+
  	}	
 
  	function handleNoSubmit(e) {
@@ -23,7 +24,7 @@ const FeedbackForm = () => {
 				<form id="feedbackForm" >
 					<button type="submit" value="No" onClick={e => handleNoSubmit(e)}>No</button>
 				</form>
-				  <p>This site has helped people reduce, reuse, or recycle {count} times.</p>
+				  <p>This site has helped you reduce, reuse, or recycle {count} times.</p>
 			</div>
 		)
 	}
