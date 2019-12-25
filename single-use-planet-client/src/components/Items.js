@@ -36,11 +36,11 @@ class Items extends Component {
   
   	renderAll() {
   		return (
-  			<div>
-			{this.props.items.map(item => (<div><Link to={`/items/${item.id}`} key={item.id} onClick={(e) => this.handleClick(e, item) }>
+  			<div className="col-12">
+			{this.props.items.map(item => (
+				<Link to={`/items/${item.id}`} key={item.id} onClick={(e) => this.handleClick(e, item) }>
 					<ItemName key={item.id} item={item} />
 				</Link> 
-				</div>
 				)
 			)
 			}
@@ -52,13 +52,12 @@ class Items extends Component {
 	    return this.props.items.filter(item =>
 	        item.name.toString().toLowerCase().includes(this.state.item.toString().toLowerCase())).map(searchedItems => {
 	          return(
-	            <div key={searchedItems.name}>
+	            <div key={searchedItems.name} className="col-12">
 	            <Link to={`/items/${searchedItems.id}`} key={searchedItems.id} onClick={(e) => this.handleClick(e, searchedItems) }>
 	              <ItemName key={searchedItems.id} item={searchedItems} />
-	              </Link>
+	            </Link>
 	            </div>
-	          );
-
+	  	    );
 	        })
     }
 
@@ -67,9 +66,10 @@ class Items extends Component {
 		return (
 		<div>
 		<input type="text" value={this.state.input} placeholder={"Search for an Item"} onChange={this.handleOnChange.bind(this)} />
-			<h3>What To Do With:</h3>
+		<div className="row mt-4">
 			{this.state.searched ? this.renderSearchedList() : this.renderAll()}
 			{this.state.clicked ? <ItemCard item={this.state.item}/> : null}
+		</div>
 		</div>
 		);
 	}

@@ -6,8 +6,8 @@ class ItemsContainer extends React.Component {
 	
 	render() {
 		return (
-		<div>
-		 	<h1>Items Container</h1>
+		<div className="container-fluid">
+		 	<h1>What To Do With:</h1>
 			<Items/>
 		</div>
 		);
