@@ -70,5 +70,14 @@
 }
 
 .featurette-image {
-  height: 100px;
+  height: 150px;
+}
+
+.featurette {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+
+.featurette h2 {
+  margin-top: 1.5rem;
 }
