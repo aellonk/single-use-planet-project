@@ -89,3 +89,17 @@
 .featurette h2 {
   margin-top: 1.5rem;
 }
+
+.searchbox {
+  border: 1px solid black;
+}
+
+.searchbox label {
+    margin-bottom: 0;
+}
+
+#searchfocus {
+  border: none;
+  margin-left: .5rem;
+  width: 93%;
+}

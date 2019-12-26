@@ -65,7 +65,12 @@ class Items extends Component {
 	render() {
 		return (
 		<div>
-		<input type="text" value={this.state.input} placeholder={"Search for an Item"} onChange={this.handleOnChange.bind(this)} />
+		<div className="searchbox col-5 mx-auto">
+		<label for="search-by">
+			<i className="fas fa-search"></i>
+		</label>
+		<input id="searchfocus" type="text" value={this.state.input} placeholder={"Find an Item"} onChange={this.handleOnChange.bind(this)} />
+		</div>
 		<div className="row mt-4">
 			{this.state.searched ? this.renderSearchedList() : this.renderAll()}
 			{this.state.clicked ? <ItemCard item={this.state.item}/> : null}

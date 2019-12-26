@@ -16,15 +16,14 @@ const FeedbackForm = () => {
  	}	
 
 		return (
-			<div>
-				<h3>Has this site helped you reduce, reuse, or recycle your items? </h3>
-				<form id="feedbackForm" onSubmit={e => handleYesSubmit(e)}>
-					<button type="submit" value="Yes" >Yes</button>
+			<div className="container-fluid">
+			<h1 className="text-center mt-4">Feedback</h1>
+				<h3 className="text-center">Has this site helped you reduce, reuse, or recycle your items? </h3>
+				<form className="text-center" id="feedbackForm" >
+					<button type="submit" value="Yes" className="m-3" onClick={e => handleYesSubmit(e)}>Yes</button>
+					<button type="submit" value="No" className="m-3" onClick={e => handleNoSubmit(e)}>No</button>
 				</form>
-				<form id="feedbackForm" >
-					<button type="submit" value="No" onClick={e => handleNoSubmit(e)}>No</button>
-				</form>
-				  <p>This site has helped you reduce, reuse, or recycle {count} times.</p>
+				  <p className="text-center mt-3">This site has helped you reduce, reuse, or recycle {count} times.</p>
 			</div>
 		)
 	}
