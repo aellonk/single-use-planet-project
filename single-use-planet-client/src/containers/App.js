@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import ItemsContainer from './ItemsContainer';
+import HomePageContainer from './HomePageContainer';
 import './App.css';
 import About from '../components/About';
 import Resources from '../components/Resources';
@@ -16,6 +17,7 @@ class App extends Component {
 			<div> 
 				<NavBar/>
 				<Switch>
+				  <Route exact path= '/' component={ HomePageContainer }/>
 	              <Route exact path= '/items' component={ ItemsContainer }/>
 	              <Route exact path= '/resources' component={ Resources }/>
 	              <Route exact path= '/about' component={ About }/>

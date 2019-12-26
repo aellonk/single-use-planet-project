@@ -42,3 +42,33 @@
   margin: 0 auto;
   display: block;
 }
+
+.carousel .one {
+    background: url("https://source.unsplash.com/HfgMyrPrLxI/");
+    background-size: cover;
+    -moz-background-size: cover;
+    height: 400px;
+}
+.carousel .two {
+    background: url("https://source.unsplash.com/OlGovwWYt8M/");
+    background-size: cover;
+    -moz-background-size: cover;
+    height: 400px;
+    background-position: center;
+}
+.carousel .three {
+    background: url("https://source.unsplash.com/7zaanYdzRnc/");
+    background-size: cover;
+    -moz-background-size: cover;
+    height: 400px;
+    background-position: center;
+}
+.carousel .active.left {
+    left:0;
+    opacity:0;
+    z-index:2;
+}
+
+.featurette-image {
+  height: 100px;
+}
