@@ -48,6 +48,7 @@
     background-size: cover;
     -moz-background-size: cover;
     height: 400px;
+    filter: brightness(0.9);
 }
 .carousel .two {
     background: url("https://source.unsplash.com/OlGovwWYt8M/");
@@ -55,6 +56,7 @@
     -moz-background-size: cover;
     height: 400px;
     background-position: center;
+    filter: brightness(0.8);
 }
 .carousel .three {
     background: url("https://source.unsplash.com/7zaanYdzRnc/");
@@ -62,11 +64,17 @@
     -moz-background-size: cover;
     height: 400px;
     background-position: center;
+    filter: brightness(0.9);
+
 }
 .carousel .active.left {
     left:0;
     opacity:0;
     z-index:2;
+}
+
+.carousel-caption {
+  font-weight: bold;
 }
 
 .featurette-image {

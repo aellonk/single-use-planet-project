@@ -20,7 +20,7 @@ class HomePageContainer extends React.Component {
 		        <div className="container">
 		          <div className="carousel-caption text-left">
 		            <h1>What to do with _____</h1>
-		            <p>Not sure if you can recycle that? Find out here.</p>
+		            <h4>Not sure if you can recycle that? Find out here.</h4>
 		            <p><a className="btn btn-lg btn-primary" href="#" role="button">Browse Items</a></p>
 		          </div>
 		        </div>
@@ -30,7 +30,7 @@ class HomePageContainer extends React.Component {
 		        <div className="container">
 		          <div className="carousel-caption text-left">
 		            <h1>Resources</h1>
-		            <p>Find helpful tools and local businesses that support waste diversion.</p>
+		            <h4>Find helpful tools and local businesses that support waste diversion.</h4>
 		            <p><a className="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p>
 		          </div>
 		        </div>
@@ -40,7 +40,7 @@ class HomePageContainer extends React.Component {
 		        <div className="container">
 		          <div className="carousel-caption text-left">
 		            <h1>Events</h1>
-		            <p>Workshops and discussions to help you repair your items and live sustainably.</p>
+		            <h4>Workshops and discussions to help you repair your items and live sustainably.</h4>
 		            <p><a className="btn btn-lg btn-primary" href="#" role="button">Browse Events</a></p>
 		          </div>
 		        </div>
