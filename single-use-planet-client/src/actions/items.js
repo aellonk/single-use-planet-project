@@ -10,11 +10,16 @@ const setItems = items => {
 
 // Async Actions (Actions that make async calls)
 export const getItems = () => {
+	console.log("c")
 	return dispatch => {
 		return fetch(`${API_URL}`)
 		.then(response => response.json())
-		.then(items => dispatch(setItems(items)))
+		.then(items => {
+			console.log("d")
+			dispatch(setItems(items))
+		})
 		.catch(error => console.log(error));
 	}
+	console.log("e")
 }
 

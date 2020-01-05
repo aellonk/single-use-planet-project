@@ -7,7 +7,7 @@ import Resources from '../components/Resources';
 import ItemCard from '../components/ItemCard';
 import NavBar from '../components/NavBar';
 import	FeedbackForm from '../components/FeedbackForm';
-import { Route, withRouter, Switch, Link} from 'react-router-dom'
+import { Route, Switch} from 'react-router-dom'
 
 
 class App extends Component {
