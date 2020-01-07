@@ -4,16 +4,9 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
-class AddItemForm extends Component {
-  state = {
-    name: '',
-    material: '',
-    alternative: '',
-    instructions: '',
-    img_url: ''
-  };
-
-	handleChange = (event) => {
+const AddItemForm = ({ name, material, alternative, instructions, img_url }) => {
+  
+	const handleChange = event => {
 	    this.setState({
 	      [event.target.name]: event.target.value
 	    });
