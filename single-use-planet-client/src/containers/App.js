@@ -23,7 +23,7 @@ class App extends Component {
 	              <Route exact path= '/resources' component={ Resources }/>
 	              <Route exact path= '/about' component={ About }/>
 	              <Route exact path= '/feedback' component={ FeedbackForm }/>
-	              <Route exact path= '/additem' component={ AddItemForm } />
+	              <Route exact path= '/items/new' component={ AddItemForm } />
 	            </Switch>
 			</div>
 		)
