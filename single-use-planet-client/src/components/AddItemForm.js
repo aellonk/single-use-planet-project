@@ -3,13 +3,10 @@ import { connect } from 'react-redux';
 import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
-import { updateAddItemForm, createItem } from '../actions/addItemForm'
+import { updateAddItemForm } from '../actions/addItemForm'
+import { createItem } from '../actions/items'
 
-const AddItemForm = ({ name, material, alternative, instructions, img_url }) => {
-
-
-
-
+const AddItemForm = ({ name, material, alternative, instructions, img_url, updateAddItemForm, history, createItem }) => {
 
 	const handleChange = event => {
 		const { name, value } = event.target
@@ -18,7 +15,13 @@ const AddItemForm = ({ name, material, alternative, instructions, img_url }) => 
 
   	const handleSubmit = event => {
 	  	event.preventDefault();
-	  	console.log("submitted")
+	  	createItem({
+	  		name, 
+		 	material, 
+		 	alternative, 
+		 	instructions, 
+		 	img_url
+		}, history)
 	}
 
 	   return(
@@ -81,11 +84,15 @@ const AddItemForm = ({ name, material, alternative, instructions, img_url }) => 
 const mapStateToProps = state => {
 	const { name, material, alternative, instructions, img_url } = state.addItemForm
 	return {
-		 name, material, alternative, instructions, img_url
+		 name, 
+		 material, 
+		 alternative, 
+		 instructions, 
+		 img_url
 	}
 }
 
 
-export default connect(mapStateToProps, { updateAddItemForm })(AddItemForm);
+export default connect(mapStateToProps, { updateAddItemForm, createItem })(AddItemForm);
 
 

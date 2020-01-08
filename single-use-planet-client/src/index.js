@@ -11,7 +11,6 @@ import thunk from 'redux-thunk';
 import './index.css';
 import itemsReducer from './reducers/itemsReducer';
 import addItemForm from './reducers/addItemForm';
-// import { configureStore } from 'redux-starter-kit';
 import App from './containers/App';
 import * as serviceWorker from './serviceWorker';
 
