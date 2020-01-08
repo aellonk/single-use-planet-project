@@ -1,4 +1,4 @@
-const initialState => {
+const initialState = {
 	name: '',
     material: '',
     alternative: '',
@@ -9,7 +9,9 @@ const initialState => {
 export default (state=initialState, action) => {
 	switch(action.type) {
 		case 'UPDATE_NEW_ITEM_FORM':
-			return action.itemFormData
+			return {
+				...state, [action.formData.name] : action.formData.value
+			}
 		default:
 			return state;
 	}

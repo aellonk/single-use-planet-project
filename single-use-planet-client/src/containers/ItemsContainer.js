@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Items from '../components/Items';
 
 
-class ItemsContainer extends React.Component {
+class ItemsContainer extends Component {
 	
 	render() {
 		return (
