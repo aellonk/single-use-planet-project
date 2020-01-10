@@ -1,14 +1,11 @@
-const itemsReducer = (state = { items: []}, action) => {
+export default (state = [], action) => {
 	switch(action.type) {
 		case 'GET_ITEMS_SUCCESS':
-			return { ...state, items: action.items};
+			return action.items
 		case 'ADD_ITEM':
-			console.log({...state, items: [...state.items, action.item]} );
-      		return {...state, items: [...state.items, action.item]} ;
+      		return state.concat(action.item)
 		default:
 			return state;
 	}
 }
 
-
-export default itemsReducer;

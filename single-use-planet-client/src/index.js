@@ -1,3 +1,4 @@
+import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import $ from 'jquery';
 import Popper from 'popper.js';
@@ -5,7 +6,6 @@ import 'bootstrap/dist/js/bootstrap.bundle.min';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux'
-import { createStore, applyMiddleware, compose, combineReducers } from 'redux';
 import { Route, Link, BrowserRouter as Router } from 'react-router-dom'
 import thunk from 'redux-thunk';
 import './index.css';
@@ -16,7 +16,7 @@ import * as serviceWorker from './serviceWorker';
 
 
 const reducer = combineReducers({
-	itemsReducer,
+	items: itemsReducer,
 	addItemForm
 })
 
