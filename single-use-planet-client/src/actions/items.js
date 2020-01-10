@@ -1,7 +1,7 @@
 const API_URL = process.env.REACT_APP_API_URL;
 
 // Action Creators (functions that get sent to reducer)
-const setItems = items => {
+export const setItems = items => {
 	return {
 		type: 'GET_ITEMS_SUCCESS',
 		items
@@ -15,22 +15,23 @@ export const addItem = item => {
 	};
 }
 
+
 // Async Actions (Actions that make async calls)
 export const getItems = () => {
-	console.log("c")
 	return dispatch => {
 		return fetch(`${API_URL}`)
 		.then(response => response.json())
 		.then(items => {
-			console.log("d")
 			dispatch(setItems(items))
 		})
 		.catch(error => console.log(error));
 	}
-	console.log("e")
 }
 
-export const createItem = (itemData) => {
+
+
+
+export const createItem = (itemData, history) => {
 	return dispatch => {
 		const sendableItemData = {
 			name: itemData.name,
@@ -48,9 +49,13 @@ export const createItem = (itemData) => {
 	    })
 	    .then(response => response.json())
 	    .then(response => {
-			dispatch(addItem(response.data))
-			window.history.push(`/items/${response.data.id}`)
-		})
-	   	.catch(error => console.log(error))
-		}
+        if (response.error) {
+          alert(response.error)
+        } else {
+          dispatch(addItem(response))
+          history.push(`/items/${response.id}`)
+        }
+      })
+      .catch(console.log)
 	}
+}
