@@ -7,6 +7,7 @@ import Resources from '../components/Resources';
 import NavBar from '../components/NavBar';
 import AddItemForm from '../components/AddItemForm';
 import	FeedbackForm from '../components/FeedbackForm';
+import	ItemAdded from '../components/ItemAdded';
 import { Route, Switch} from 'react-router-dom'
 
 
@@ -23,6 +24,7 @@ class App extends Component {
 	              <Route exact path= '/about' component={ About }/>
 	              <Route exact path= '/feedback' component={ FeedbackForm }/>
 	              <Route exact path= '/items/new' component={ AddItemForm } />
+				  <Route exact path= '/items/:id' component={ ItemAdded } />
 	            </Switch>
 			</div>
 		)
