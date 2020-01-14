@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 import TerraCycle_Logo_Low_Res from '../images/TerraCycle_Logo_Low_Res.png'
 
 
-class HomePageContainer extends React.Component {
-	
-	render() {
+ const HomePageContainer = () => {
+
 		return (
 		<div>
 		  <div id="myCarousel" className="carousel slide mb-5" data-ride="carousel">
@@ -85,8 +84,6 @@ class HomePageContainer extends React.Component {
 		</div>
 
 		);
-	}
-	
 }
 
 export default HomePageContainer;
