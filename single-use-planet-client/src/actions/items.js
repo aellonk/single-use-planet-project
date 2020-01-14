@@ -32,6 +32,7 @@ export const getItems = () => {
 
 
 export const createItem = (itemData, history) => {
+	console.log("c")
 	return dispatch => {
 		const sendableItemData = {
 			name: itemData.name,
@@ -49,6 +50,7 @@ export const createItem = (itemData, history) => {
 	    })
 	    .then(response => response.json())
 	    .then(response => {
+			console.log("d")
         if (response.error) {
           alert(response.error)
         } else {
@@ -58,4 +60,5 @@ export const createItem = (itemData, history) => {
       })
       .catch(console.log)
 	}
+	console.log("e")
 }

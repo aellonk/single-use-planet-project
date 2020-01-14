@@ -14,7 +14,8 @@ const AddItemForm = ({ name, material, alternative, instructions, img_url, updat
   	};
 
   	const handleSubmit = event => {
-	  	event.preventDefault();
+		  event.preventDefault();
+		  console.log("a")
 	  	createItem({
 	  		name, 
 		 	material, 
@@ -22,6 +23,7 @@ const AddItemForm = ({ name, material, alternative, instructions, img_url, updat
 		 	instructions, 
 		 	img_url
 		}, history)
+		console.log("b")
 	}
 
 	   return(

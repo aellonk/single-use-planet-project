@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import ItemName from '../components/ItemName';
 import ItemCard from '../components/ItemCard';
 import { getItems } from '../actions/items';
+import Upvote from '../components/Upvote'
 
 
 
@@ -40,6 +41,7 @@ class Items extends Component {
 			{this.props.items.map(item => (
 				<Link to={`/items/${item.id}`} key={item.id} onClick={(e) => this.handleClick(e, item) }>
 					<ItemName key={item.id} item={item} />
+					<Upvote />
 				</Link> 
 				)
 			)
