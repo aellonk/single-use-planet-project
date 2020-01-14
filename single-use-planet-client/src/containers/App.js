@@ -4,7 +4,6 @@ import HomePageContainer from './HomePageContainer';
 import './App.css';
 import About from '../components/About';
 import Resources from '../components/Resources';
-import ItemCard from '../components/ItemCard';
 import NavBar from '../components/NavBar';
 import AddItemForm from '../components/AddItemForm';
 import	FeedbackForm from '../components/FeedbackForm';

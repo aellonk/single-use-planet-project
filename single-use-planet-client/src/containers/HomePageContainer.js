@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Items from '../components/Items';
 import TerraCycle_Logo_Low_Res from '../images/TerraCycle_Logo_Low_Res.png'
 
 
