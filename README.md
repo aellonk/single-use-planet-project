@@ -3,18 +3,24 @@ Single-use Planet is a waste diversion app created with React/Redux that helps p
 
 ## Installation
 
-`cd single-use-planet-project-api`
+Clone this repository and then execute:
+
+$ `cd single-use-planet-project-api`
 
 Start the backend server with the command:
-`rails -s`
+
+$ `rails -s`
 
 In another terminal:
-`cd single-use-planet-project-client`
+
+$ `cd single-use-planet-project-client`
 
 Start the frontend with the command: 
-`npm start`
+$ `npm start`
 
 It will ask you if you would like to use a different port because localhost:3000 is already in use (by the backend). Type 'Y' to answer yes.
+
+Then open page in browser according to web address displayed in terminal (ex. https://localhost:3001).
 
 ## Usage
 Browse and search for common household items to find alternative uses for them and learn how to recycle them so they don't end up in landfills.
