@@ -1,6 +1,8 @@
 # Single-use Planet
 Single-use Planet is a waste diversion app created with React/Redux that helps people reuse and recycle.  
 
+![](single-use-planet-project-client/src/images/Single-use_planet.png)
+
 ## Installation
 
 Clone this repository and then execute:
