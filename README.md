@@ -5,18 +5,19 @@ Single-use Planet is a waste diversion app created with React/Redux that helps p
 
 Clone this repository and then execute:
 
-$ `cd single-use-planet-project-api`
+`$ cd single-use-planet-project-api`
 
 Start the backend server with the command:
 
-$ `rails -s`
+`$ rails -s`
 
 In another terminal:
 
-$ `cd single-use-planet-project-client`
+`$ cd single-use-planet-project-client`
 
 Start the frontend with the command: 
-$ `npm start`
+
+`$ npm start`
 
 It will ask you if you would like to use a different port because localhost:3000 is already in use (by the backend). Type 'Y' to answer yes.
 
