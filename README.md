@@ -25,6 +25,8 @@ It will ask you if you would like to use a different port because localhost:3000
 
 Then open page in browser according to web address displayed in terminal (ex. https://localhost:3001).
 
+You can manage the database with the application Rested and manage all of the items at http://localhost:3000/api/items.
+
 ## Usage
 Browse and search for common household items to find alternative uses for them and learn how to recycle them so they don't end up in landfills.
 
