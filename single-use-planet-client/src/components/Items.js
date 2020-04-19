@@ -68,7 +68,7 @@ class Items extends Component {
 		return (
 		<div>
 		<div className="searchbox col-5 mx-auto">
-		<label for="search-by">
+		<label htmlFor="search-by">
 			<i className="fas fa-search"></i>
 		</label>
 		<input id="searchfocus" type="text" value={this.state.input} placeholder={"Find an Item"} onChange={this.handleOnChange.bind(this)} />
