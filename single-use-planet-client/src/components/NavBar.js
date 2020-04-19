@@ -12,7 +12,6 @@ const NavBar = () => {
         <Nav.Link href="/items">Browse Items</Nav.Link>
         <Nav.Link href="/resources">Zero Waste Resources</Nav.Link>
         <Nav.Link href="/about">About</Nav.Link>
-        <Nav.Link href="/feedback">Feedback</Nav.Link>
       </Nav>
     </Navbar.Collapse>
 </Navbar>
