@@ -11,7 +11,7 @@ Clone this repository and then execute:
 
 Start the backend server with the command:
 
-`$ rails -s`
+`$ rails server`
 
 In another terminal:
 
