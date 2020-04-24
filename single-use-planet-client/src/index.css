@@ -12,3 +12,6 @@ code {
     monospace;
 }
 
+.card-header {
+  background: white;
+}

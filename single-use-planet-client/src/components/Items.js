@@ -74,7 +74,7 @@ class Items extends Component {
 	render() {
 		return (
 		<div>
-		<div className="searchbox col-5 mx-auto">
+		<div className="searchbox col-xl-5 col-lg-5 col-md-5 col-sm-12 mx-auto p-3">
 		<label htmlFor="search-by">
 			<i className="fas fa-search"></i>
 		</label>
