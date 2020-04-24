@@ -1,11 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom'
 import ItemName from '../components/ItemName';
 import ItemCard from '../components/ItemCard';
 import { getItems } from '../actions/items';
-import Button from 'react-bootstrap/Button';
-import Collapse from 'react-bootstrap/Collapse';
+import Accordion from 'react-bootstrap/Accordion';
+import Card from 'react-bootstrap/Card';
 
 class Items extends Component {
 
@@ -22,11 +21,6 @@ class Items extends Component {
 	componentDidMount() {
 		this.props.getItems()
 	}
-	
-	handleClick = (e, item) => {
-		e.preventDefault();
-		this.setState({clicked: true, item: item})
-	}
 
 	handleOnChange(e){
 	    this.setState({
@@ -39,27 +33,16 @@ class Items extends Component {
   		return (
   			<div className="col-12">
 			{this.props.items.map(item => (
-				<>
-					<Button
-						onClick={() => this.setState({ open: !this.state.open })}
-						aria-controls="example-collapse-text"
-						aria-expanded={this.state.open}
-					>
-						<Link to={`/items/${item.id}`} key={item.id} onClick={(e) => this.handleClick(e, item) }>
-							<ItemName key={item.id} item={item} />
-						</Link> 
-					</Button>
-					<Collapse in={this.state.open}>
-						<div id="example-collapse-text">
-							{this.state.clicked ? <ItemCard item={this.state.item}/> : null}
-						</div>
-					</Collapse>
-				</>
-
-
-
-
-				
+				<Accordion defaultActiveKey="0">
+					<Card>
+						<Accordion.Toggle as={Card.Header} eventKey={item.id}>
+							<ItemName key={item.id} item={item}/>
+						</Accordion.Toggle>
+						<Accordion.Collapse eventKey={item.id}>
+							<Card.Body><ItemCard item={item}/></Card.Body>
+						</Accordion.Collapse>
+					</Card>
+				</Accordion>
 				)
 			)
 			}
@@ -69,15 +52,22 @@ class Items extends Component {
 
   	renderSearchedList(){
 	    return this.props.items.filter(item =>
-	        item.name.toString().toLowerCase().includes(this.state.item.toString().toLowerCase())).map(searchedItems => {
+	        item.name.toString().toLowerCase().includes(this.state.item.toString().toLowerCase())).map(searchedItem => {
 	          return(
-	            <div key={searchedItems.name} className="col-12">
-	            <Link to={`/items/${searchedItems.id}`} key={searchedItems.id} onClick={(e) => this.handleClick(e, searchedItems) }>
-	              <ItemName key={searchedItems.id} item={searchedItems} />
-	            </Link>
-	            </div>
-	  	    );
-	        })
+					<div key={searchedItem.name} className="col-12">
+					<Accordion defaultActiveKey="0">
+						<Card>
+							<Accordion.Toggle as={Card.Header} eventKey={searchedItem.id}>
+								<ItemName key={searchedItem.id} item={searchedItem} />
+							</Accordion.Toggle>
+							<Accordion.Collapse eventKey={searchedItem.id}>
+								<Card.Body><ItemCard item={searchedItem}/></Card.Body>
+							</Accordion.Collapse>
+						</Card>
+					</Accordion>
+					</div>
+	  	   		);
+	    	})
     }
 
 
@@ -91,11 +81,7 @@ class Items extends Component {
 		<input id="searchfocus" type="text" value={this.state.input} placeholder={"Find an Item"} onChange={this.handleOnChange.bind(this)} />
 		</div>
 		<div className="row mt-4">
-			
 			{this.state.searched ? this.renderSearchedList() : this.renderAll()}
-
-					
-					
 		</div>
 		</div>
 		);
