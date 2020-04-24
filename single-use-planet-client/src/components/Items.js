@@ -12,7 +12,6 @@ class Items extends Component {
 	    super(props);
 	    this.state = {
 	      searched: false,
-	      clicked: false,
 		  item: '',
 		  open: false
 	    };
@@ -86,7 +85,6 @@ class Items extends Component {
 		</div>
 		);
 	}
-	
 }
 
 const mapStateToProps = (state) => {
