@@ -110,6 +110,13 @@
 }
 
 .navbar-brand {
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: bold;
+}
+
+@media (min-width: 992px) {
+  .navbar-expand-lg .navbar-nav .nav-link {
+      padding-right: .75rem;
+      padding-left: .75rem;
+  }
 }
