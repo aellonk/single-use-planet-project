@@ -15,3 +15,8 @@ code {
 .card-header {
   background: white;
 }
+
+.navbar-brand {
+  font-size: 4rem;
+  font-weight: bold;
+}

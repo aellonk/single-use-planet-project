@@ -83,6 +83,7 @@ class Items extends Component {
 			{this.state.searched ? this.renderSearchedList() : this.renderAll()}
 		</div>
 		</div>
+	
 		);
 	}
 }
