@@ -11,7 +11,7 @@ import TerraCycle_Logo_Low_Res from '../images/TerraCycle_Logo_Low_Res.png'
 		  <About/>
 
 			<div className="container marketing">
-			    <div className="row">
+			    <div className="row homepage-images mt-5">
 			      <div className="col-lg-4 text-center featurette">
 			        <img src="https://source.unsplash.com/mWTOR3Rx8l8/" className="bd-placeholder-img-lg featurette-image img-fluid mx-auto" alt=""/>
 			        <h2>Recycle Electronics</h2>

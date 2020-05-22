@@ -119,6 +119,22 @@
   width: auto;
 }
 
+
+.homepage-images:first-child img {
+  border-radius: 3px;
+  border: 5px solid #137fc3;
+}
+
+.homepage-images:nth-child(2) img {
+  border-radius: 3px;
+  border: 5px solid #cd4e44;
+}
+
+.homepage-images:nth-child(3) img {
+  border-radius: 3px;
+  border: 5px solid #386c56;
+}
+
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
       padding-right: .75rem;
