@@ -1,4 +1,5 @@
 import React from 'react';
+import About from '../components/About'
 import TerraCycle_Logo_Low_Res from '../images/TerraCycle_Logo_Low_Res.png'
 
 
@@ -6,55 +7,8 @@ import TerraCycle_Logo_Low_Res from '../images/TerraCycle_Logo_Low_Res.png'
 
 		return (
 		<div>
-		  <div id="myCarousel" className="carousel slide mb-5" data-ride="carousel">
-		    <ol className="carousel-indicators">
-		      <li data-target="#myCarousel" data-slide-to="0" className="active"></li>
-		      <li data-target="#myCarousel" data-slide-to="1"></li>
-		      <li data-target="#myCarousel" data-slide-to="2"></li>
-		    </ol>
-		    <div className="carousel-inner">
-		      <div className="carousel-item active">
-		      <div className="active item one"></div>
-		        <div className="container">
-		          <div className="carousel-caption text-left">
-		            <h1>What to do with _____</h1>
-		            <h4>Not sure if you can recycle that? Find out here.</h4>
-		            <p><a className="btn btn-lg btn-primary" href="/items" role="button">Browse Items</a></p>
-		          </div>
-		        </div>
-		      </div>
-		      <div className="carousel-item">
-		      <div className="item two"></div>
-		        <div className="container">
-		          <div className="carousel-caption text-left">
-		            <h1>Resources</h1>
-		            <h4>Find helpful tools and local businesses that support waste diversion.</h4>
-		            <p><a className="btn btn-lg btn-primary" href="/resources" role="button">Learn more</a></p>
-		          </div>
-		        </div>
-		      </div>
-		      <div className="carousel-item">
-		     <div className="item three"></div>
-		        <div className="container">
-		          <div className="carousel-caption text-left">
-		            <h1>Events</h1>
-		            <h4>Workshops and discussions to help you repair your items and live sustainably.</h4>
-		            <p><button className="btn btn-lg btn-primary">Browse Events</button></p>
-		          </div>
-		        </div>
-		      </div>
-		    </div>
-		    <a className="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-		      <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-		      <span className="sr-only">Previous</span>
-		    </a>
-		    <a className="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-		      <span className="carousel-control-next-icon" aria-hidden="true"></span>
-		      <span className="sr-only">Next</span>
-		    </a>
-  		  </div>
-
-
+		  
+		  <About/>
 
 			<div className="container marketing">
 			    <div className="row">

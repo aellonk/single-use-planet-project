@@ -11,7 +11,6 @@ const NavBar = () => {
         <Nav className="mr-auto">
           <Nav.Link href="/items">Browse Items</Nav.Link>
           <Nav.Link href="/resources">Zero Waste Resources</Nav.Link>
-          <Nav.Link href="/about">About</Nav.Link>
           <Nav.Link href="/items/new">Add Item</Nav.Link>
         </Nav>
       </Navbar.Collapse>
