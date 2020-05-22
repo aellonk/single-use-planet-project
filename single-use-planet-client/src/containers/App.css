@@ -114,6 +114,11 @@
   font-weight: bold;
 }
 
+.homepageImage {
+  height: 300px;
+  width: auto;
+}
+
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
       padding-right: .75rem;
