@@ -7,7 +7,7 @@ Single-use Planet is a waste diversion app created with React/Redux that helps p
 
 Clone this repository and then execute:
 
-`$ cd single-use-planet-project-api`
+`$ cd single-use-planet-api`
 
 Start the backend server with the command:
 
@@ -15,7 +15,7 @@ Start the backend server with the command:
 
 In another terminal:
 
-`$ cd single-use-planet-project-client`
+`$ cd single-use-planet-client`
 
 Start the frontend with the command: 
 
