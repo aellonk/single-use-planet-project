@@ -20,7 +20,6 @@ class App extends Component {
 				  <Route exact path= '/' component={ HomePageContainer }/>
 	              <Route exact path= '/items' component={ ItemsContainer }/>
 	              <Route exact path= '/resources' component={ Resources }/>
-	              <Route exact path= '/about' component={ About }/>
 	              <Route exact path= '/items/new' component={ AddItemForm } />
 				  <Route exact path= '/items/:id' component={ ItemAdded } />
 	            </Switch>

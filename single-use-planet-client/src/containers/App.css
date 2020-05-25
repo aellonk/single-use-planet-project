@@ -120,19 +120,19 @@
 }
 
 
-.homepage-images:first-child img {
+.feat-1 {
   border-radius: 3px;
-  border: 5px solid #137fc3;
+  border: 2px solid #137fc3;
 }
 
-.homepage-images:nth-child(2) img {
+.feat-2 {
   border-radius: 3px;
-  border: 5px solid #cd4e44;
+  border: 2px solid #cd4e44;
 }
 
-.homepage-images:nth-child(3) img {
+.feat-3 {
   border-radius: 3px;
-  border: 5px solid #386c56;
+  border: 2px solid #386c56;
 }
 
 @media (min-width: 992px) {
