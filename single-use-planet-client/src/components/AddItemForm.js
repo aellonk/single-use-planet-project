@@ -27,7 +27,7 @@ const AddItemForm = ({ name, material, alternative, instructions, img_url, updat
 	   return(
 	    <div>
 	    <Container className="mt-5 mb-5">
-	    <h1 className="mt-5 mb-5 text-center">Add an Item</h1>
+	    <h2 className="mt-5 mb-5 text-center">Add an Item</h2>
 	    <Form onSubmit={handleSubmit}>
   			<Form.Group controlId="formName" >
 	          <Form.Label>Item Name - What do you call this thing in layman's terms? </Form.Label>
