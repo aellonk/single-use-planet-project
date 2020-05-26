@@ -6,7 +6,7 @@ const ItemsContainer = () => {
 	
 		return (
 		<div className="container-fluid mt-5">
-		 	<h1 className="text-center mt-4">What To Do With...</h1>
+		 	<h2 className="text-center mt-4">What To Do With...</h2>
 			<Items/>
 		</div>
 		);

@@ -5,7 +5,6 @@ const ItemCard = ({item}) => {
 return (
 	<div>
 	<div key={item.id}> 
-		<h1 className="ItemCardTitle text-center">{item.name}</h1>
 		<div className="row m-4">
 		<div className="col-5">
 		<img className="ItemCardImg" src={item.img_url} alt={item.name}/>

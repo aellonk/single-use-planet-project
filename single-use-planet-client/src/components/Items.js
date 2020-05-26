@@ -32,13 +32,13 @@ class Items extends Component {
   		return (
   			<div className="col-12">
 			{this.props.items.map(item => (
-				<Accordion defaultActiveKey="0">
+				<Accordion defaultActiveKey="0" className="pt-1 pb-1">
 					<Card>
 						<Accordion.Toggle as={Card.Header} eventKey={item.id}>
 							<ItemName key={item.id} item={item}/>
 						</Accordion.Toggle>
 						<Accordion.Collapse eventKey={item.id}>
-							<Card.Body><ItemCard item={item}/></Card.Body>
+							<Card.Body className="pt-0"><ItemCard item={item}/></Card.Body>
 						</Accordion.Collapse>
 					</Card>
 				</Accordion>
@@ -54,13 +54,13 @@ class Items extends Component {
 	        item.name.toString().toLowerCase().includes(this.state.item.toString().toLowerCase())).map(searchedItem => {
 	          return(
 					<div key={searchedItem.name} className="col-12">
-					<Accordion defaultActiveKey="0">
+					<Accordion defaultActiveKey="0" className="pt-1 pb-1">
 						<Card>
 							<Accordion.Toggle as={Card.Header} eventKey={searchedItem.id}>
 								<ItemName key={searchedItem.id} item={searchedItem} />
 							</Accordion.Toggle>
 							<Accordion.Collapse eventKey={searchedItem.id}>
-								<Card.Body><ItemCard item={searchedItem}/></Card.Body>
+								<Card.Body className="pt-0"><ItemCard item={searchedItem}/></Card.Body>
 							</Accordion.Collapse>
 						</Card>
 					</Accordion>
@@ -73,7 +73,7 @@ class Items extends Component {
 	render() {
 		return (
 		<div className="container-fluid mb-5">
-		<div className="searchbox col-xl-5 col-lg-5 col-md-5 col-sm-12 mx-auto p-3">
+		<div className="searchbox col-xl-5 col-lg-5 col-md-5 col-sm-12 mx-auto p-2">
 		<label htmlFor="search-by">
 			<i className="fas fa-search"></i>
 		</label>

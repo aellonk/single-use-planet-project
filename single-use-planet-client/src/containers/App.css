@@ -92,7 +92,8 @@
 }
 
 .searchbox {
-  border: 1px solid black;
+  border: 2px solid black;
+  border-radius: 2rem;
 }
 
 .searchbox label {
@@ -150,12 +151,25 @@
   color: #279dea;
 }
 
-.nav-link:focus, .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-brand:hover {
+.nav-link:focus, .navbar-light .navbar-nav .nav-link:hover, .navbar-light .navbar-brand:hover{
   color:#279de9;
 }
 
 nav {
   border-bottom: 2px solid #279de9;
+}
+
+.card, .form-control {
+  border: 2px solid #279de9;
+  border-radius: 2rem;
+}
+
+.accordion>.card {
+  cursor: pointer;
+}
+
+.card-header {
+  border-bottom: none;
 }
 
 @media (min-width: 992px) {
