@@ -5,7 +5,7 @@ import TerraCycle_Logo_Low_Res from '../images/TerraCycle_Logo_Low_Res.png'
 const Resources = () => {
 
 	return (
-		<div className="container-fluid">
+		<div className="container-fluid mt-5">
 			<h1 className="text-center mt-4">Zero Waste Resources</h1>
 			<div className=" text-center featurette">
 			        <img src={TerraCycle_Logo_Low_Res} className="bd-placeholder-img-lg featurette-image img-fluid mx-auto feat-2" alt="TerraCycle Logo"/>

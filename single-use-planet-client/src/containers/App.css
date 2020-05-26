@@ -154,6 +154,10 @@
   color:#279de9;
 }
 
+nav {
+  border-bottom: 2px solid #279de9;
+}
+
 @media (min-width: 992px) {
   .navbar-expand-lg .navbar-nav .nav-link {
       padding-right: .75rem;
